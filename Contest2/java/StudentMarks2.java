@@ -3,6 +3,8 @@ package Contest2.java;
 import java.util.Arrays;
 import java.util.Comparator;
 
+//This approach only works with the array of strings in which in each element last two are Integer type.
+// Not applicable to the example like harsh195,alex1195,sara188 in which there are more than 2characters of int type.!
 public class StudentMarks2 {
 
     static String[] sortStudents(String[] inputArray){
@@ -23,7 +25,7 @@ public class StudentMarks2 {
         return inputArray;
     }
     public static void main(String[] args) {
-        String[] inputArray = {"harsh95", "john85", "alex95", "emma90", "sara88"};
+        String[] inputArray = {"harsh95", "john85", "alex95", "emma190", "sara88"};
         String[] sortedArray = sortStudents(inputArray);
         System.out.println(Arrays.toString(sortedArray));
     }
