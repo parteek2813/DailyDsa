@@ -32,6 +32,9 @@ public class subArrayZero {
         HashMap<Integer, Integer> hm = new HashMap<>();
         int csum =0;
         int len=-1;
+        int left =-1;
+        int right = -1;
+
         hm.put(csum, -1); // At the -1 index put csum as 0
 
         int n = arr.length;
@@ -46,19 +49,23 @@ public class subArrayZero {
                 Integer prevIndex = hm.get(csum);
                 if (prevIndex != null && i - prevIndex > len) {
                     len = i - prevIndex;
-                    System.out.println(prevIndex);
-                    System.out.println(i);
+                    right = i;
+                    left = hm.get(csum) ;
+//                    System.out.println(prevIndex);
+//                    System.out.println(i);
                 }
             }
         }
 
         System.out.println(len);
+        System.out.println(left);
+        System.out.println(right);
 
 
     }
     public static void main(String[] args) {
 //    int arr[] = {1,4,9,-11,2,-10,6,5};
-        int arr[] = {6,1,2,-3,-4,5,8};
+        int arr[] = {6,1,2,-3,-4,4,8};
         LarSum(arr);
     }
 }
