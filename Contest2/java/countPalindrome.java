@@ -29,7 +29,7 @@ public class countPalindrome {
             right++;
 
         }
-        return 1;
+        return count;
 
     }
     public static void main(String[] args) {
